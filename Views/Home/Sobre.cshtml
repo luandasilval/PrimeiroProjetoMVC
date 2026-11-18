@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Sobre";
+}
+
+<h1>Sobre</h1>
+<p>Versão: @ViewBag.Versao</p>
+
+@if (ViewBag.ParametroId != null)
+{
+    <p>Parametro "id" recebido pela rota: <strong>@ViewBag.ParametroId</strong></p>
+}
+else
+{
+    <p>Nenhum parametro "id" foi passado pela rota. Tente acessar <a href="/Home/Sobre/42"></a>/Home/Sobre/42</p>
+}
+
